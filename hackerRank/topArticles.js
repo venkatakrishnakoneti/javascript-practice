@@ -1,6 +1,8 @@
+
 // https://jsonmock.hackerrank.com/api/articles?page={pageNo}
 
 let data
+// articles from a single page
 const getArticles = async (pageNo) => {
     let pageArticles = await fetch(`https://jsonmock.hackerrank.com/api/articles?page=${pageNo}`)
         .then(res => { return res.json() }).then((r)=>{
@@ -11,6 +13,7 @@ const getArticles = async (pageNo) => {
     return pageArticles
 }
 
+// articles from all pages
 const getAllArticles = async function (pageNo) {
     const articles = await getArticles(pageNo);
     if (articles.length > 0) {
