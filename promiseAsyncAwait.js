@@ -1,5 +1,5 @@
 function fetchData() {
-    return new Promise((resolve, reject) => {
+    return new Promise((resolve) => {
       setTimeout(() => {
         const data = "Data fetched successfully";
         resolve(data); // Resolving the Promise with data
